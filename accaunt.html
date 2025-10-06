@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Bank - Личный кабинет</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Боковое меню -->
+    <nav class="sidebar">
+        <div class="logo">
+            <div class="logo-text">Omega Bank</div>
+        </div>
+        <a href="#" class="nav-item active" data-page="main">
+            <i class="fas fa-home"></i>
+            <span> Главная</span>
+        </a>
+        <a href="#" class="nav-item" data-page="cards">
+            <i class="fas fa-credit-card"></i>
+            <span> Карты</span>
+        </a>
+        <a href="#" class="nav-item" data-page="transfers">
+            <i class="fas fa-exchange-alt"></i>
+            <span> Переводы</span>
+        </a>
+        <a href="#" class="nav-item" data-page="history">
+            <i class="fas fa-history"></i>
+            <span> История</span>
+        </a>
+        <a href="#" class="nav-item" data-page="settings">
+            <i class="fas fa-cog"></i>
+            <span> Настройки</span>
+        </a>
+        <a href="#" class="nav-item" data-page="support">
+            <i class="fas fa-headset"></i>
+            <span> Поддержка</span>
+        </a>
+    </nav>
+
+    <!-- Основной контейнер -->
+    <div class="main-container">
+        <!-- Хедер -->
+        <header class="header">
+            <div class="user-info">
+                <img src="img/russhadowred.jpg" alt="Аватар" class="user-avatar">
+                <span class="user-name">RUSSHADOWRED</span>
+            </div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                Выйти
+            </button>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Главная страница -->
+            <div id="main-page" class="page active">
+                <!-- Карточка баланса -->
+                <div class="balance-card">
+                    <div class="balance-label">Общий баланс</div>
+                    <div class="balance-amount">245 780 ₽</div>
+                    <div class="mini-cards">
+                        <div class="mini-card debit">
+                            <div class="card-number">•••• 4512</div>
+                            <div class="card-details">Дебетовая</div>
+                            <div class="mini-omega">Ω</div>
+                            <div class="mir-logo">
+                                <img src="https://via.placeholder.com/18x10/cc0000/ffffff?text=MIR" alt="MIR">
+                            </div>
+                        </div>
+                        <div class="mini-card premium">
+                            <div class="card-number">•••• 7845</div>
+                            <div class="card-details">Премиум</div>
+                            <div class="mini-omega">Ω</div>
+                            <div class="mir-logo">
+                                <img src="https://via.placeholder.com/18x10/cc0000/ffffff?text=MIR" alt="MIR">
+                            </div>
+                        </div>
+                        <div class="mini-card credit">
+                            <div class="card-number">•••• 9234</div>
+                            <div class="card-details">Кредитная</div>
+                            <div class="mini-omega">Ω</div>
+                            <div class="mir-logo">
+                                <img src="https://via.placeholder.com/18x10/cc0000/ffffff?text=MIR" alt="MIR">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Счета -->
+                <div class="accounts-container">
+                    <div class="payment-account-mini">
+                        <div class="selected-indicator"></div>
+                        <div class="mini-header">
+                            <div class="account-type">Основной счёт</div>
+                            <div class="account-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                        <div class="account-balance">125 430 ₽</div>
+                        <div class="account-number">•4081 78** **** 4512</div>
+                        <div class="mini-details">
+                            <div class="account-status">Активен</div>
+                            <div class="account-currency">RUB</div>
+                        </div>
+                    </div>
+
+                    <div class="payment-account-mini">
+                        <div class="selected-indicator"></div>
+                        <div class="mini-header">
+                            <div class="account-type">Накопительный</div>
+                            <div class="account-icon">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                        </div>
+                        <div class="account-balance">78 350 ₽</div>
+                        <div class="account-number">•4081 79** **** 7845</div>
+                        <div class="mini-details">
+                            <div class="account-status">Активен</div>
+                            <div class="account-currency">RUB</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Быстрые действия -->
+                <div class="quick-actions">
+                    <div class="action-btn">
+                        <div class="action-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="action-text">Перевод</div>
+                    </div>
+                    <div class="action-btn">
+                        <div class="action-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="action-text">Оплата</div>
+                    </div>
+                    <div class="action-btn">
+                        <div class="action-icon">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <div class="action-text">QR-платеж</div>
+                    </div>
+                    <div class="action-btn">
+                        <div class="action-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="action-text">История</div>
+                    </div>
+                    <div class="action-btn">
+                        <div class="action-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="action-text">Карты</div>
+                    </div>
+                    <div class="action-btn">
+                        <div class="action-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="action-text">Ещё</div>
+                    </div>
+                </div>
+
+                <!-- Продукты банка -->
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="product-title">Новая карта</div>
+                        <div class="product-description">Оформите карту с кешбэком до 10%</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="product-title">Инвестиции</div>
+                        <div class="product-description">Начните инвестировать от 10₽</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="product-title">Страхование</div>
+                        <div class="product-description">Защитите себя и близких</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <div class="product-title">Кредит</div>
+                        <div class="product-description">Кредит на любые цели до 5 млн ₽</div>
+                    </div>
+                </div>
+
+                <!-- Последние транзакции -->
+                <div class="transactions">
+                    <h2 class="section-title">Последние операции</h2>
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-title">Оплата в Магните</div>
+                            <div class="transaction-date">Сегодня, 14:30</div>
+                        </div>
+                        <div class="transaction-amount negative">-1 245 ₽</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-title">Перевод от А.С. Иванов</div>
+                            <div class="transaction-date">Вчера, 18:15</div>
+                        </div>
+                        <div class="transaction-amount positive">+5 000 ₽</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-title">Оплата интернета</div>
+                            <div class="transaction-date">15 дек, 10:20</div>
+                        </div>
+                        <div class="transaction-amount negative">-850 ₽</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Страница карт -->
+            <div id="cards-page" class="page">
+                <div class="balance-card">
+                    <h2 class="section-title">Мои карты</h2>
+                    <div class="cards-grid">
+                        <div class="card-full debit">
+                            <div class="card-header">
+                                <div class="card-type">Дебетовая карта</div>
+                                <div class="card-status active">Активна</div>
+                            </div>
+                            <div class="card-number">4512 78** **** 4512</div>
+                            <div class="card-details">
+                                <div class="card-holder">IVAN PETROV</div>
+                                <div class="card-expiry">12/25</div>
+                            </div>
+                            <div class="card-balance">125 430 ₽</div>
+                            <div class="card-actions">
+                                <button class="card-btn">Заблокировать</button>
+                                <button class="card-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="card-full premium">
+                            <div class="card-header">
+                                <div class="card-type">Премиум карта</div>
+                                <div class="card-status active">Активна</div>
+                            </div>
+                            <div class="card-number">7845 79** **** 7845</div>
+                            <div class="card-details">
+                                <div class="card-holder">IVAN PETROV</div>
+                                <div class="card-expiry">10/26</div>
+                            </div>
+                            <div class="card-balance">78 350 ₽</div>
+                            <div class="card-actions">
+                                <button class="card-btn">Заблокировать</button>
+                                <button class="card-btn">Детали</button>
+                            </div>
+                        </div>
+
+                        <div class="card-full credit">
+                            <div class="card-header">
+                                <div class="card-type">Кредитная карта</div>
+                                <div class="card-status active">Активна</div>
+                            </div>
+                            <div class="card-number">9234 80** **** 9234</div>
+                            <div class="card-details">
+                                <div class="card-holder">IVAN PETROV</div>
+                                <div class="card-expiry">08/27</div>
+                            </div>
+                            <div class="card-limit">Лимит: 300 000 ₽</div>
+                            <div class="card-actions">
+                                <button class="card-btn">Заблокировать</button>
+                                <button class="card-btn">Детали</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Страница переводов -->
+            <div id="transfers-page" class="page">
+                <div class="balance-card">
+                    <h2 class="section-title">Переводы</h2>
+                    <div class="transfer-form">
+                        <div class="form-group">
+                            <label>Откуда</label>
+                            <select class="form-select">
+                                <option>•4081 78** **** 4512 (125 430 ₽)</option>
+                                <option>•4081 79** **** 7845 (78 350 ₽)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Куда</label>
+                            <input type="text" class="form-input" placeholder="Номер карты или счёта">
+                        </div>
+                        <div class="form-group">
+                            <label>Сумма</label>
+                            <input type="text" class="form-input" placeholder="0 ₽">
+                        </div>
+                        <button class="transfer-btn">Перевести</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Страница истории -->
+            <div id="history-page" class="page">
+                <div class="transactions">
+                    <h2 class="section-title">Вся история операций</h2>
+                    <div class="history-filters">
+                        <select class="filter-select">
+                            <option>Все операции</option>
+                            <option>Только доход</option>
+                            <option>Только расход</option>
+                        </select>
+                        <input type="date" class="date-input">
+                        <input type="date" class="date-input">
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-title">Оплата в Магните</div>
+                            <div class="transaction-date">Сегодня, 14:30</div>
+                        </div>
+                        <div class="transaction-amount negative">-1 245 ₽</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-title">Перевод от А.С. Иванов</div>
+                            <div class="transaction-date">Вчера, 18:15</div>
+                        </div>
+                        <div class="transaction-amount positive">+5 000 ₽</div>
+                    </div>
+                    <!-- Добавьте больше транзакций по необходимости -->
+                </div>
+            </div>
+
+            <!-- Страница настроек -->
+            <div id="settings-page" class="page">
+                <div class="balance-card">
+                    <h2 class="section-title">Настройки</h2>
+                    <div class="settings-list">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-title">Уведомления</div>
+                                <div class="setting-desc">Push и email уведомления</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-title">Биометрия</div>
+                                <div class="setting-desc">Вход по отпечатку пальца</div>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-title">Смена пароля</div>
+                                <div class="setting-desc">Изменить пароль от аккаунта</div>
+                            </div>
+                            <button class="setting-btn">Изменить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Страница поддержки -->
+            <div id="support-page" class="page">
+                <div class="balance-card">
+                    <h2 class="section-title">Поддержка</h2>
+                    <div class="support-options">
+                        <div class="support-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Телефон</h3>
+                            <p>8-800-555-35-35</p>
+                            <small>Круглосуточно</small>
+                        </div>
+                        <div class="support-card">
+                            <i class="fas fa-comment"></i>
+                            <h3>Чат</h3>
+                            <p>Онлайн консультация</p>
+                            <small>24/7</small>
+                        </div>
+                        <div class="support-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>support@omegabank.ru</p>
+                            <small>Ответ в течение 24 часов</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Навигация между страницами
+            const navItems = document.querySelectorAll('.nav-item');
+            const pages = document.querySelectorAll('.page');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Убираем активный класс у всех пунктов меню и страниц
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    pages.forEach(page => page.classList.remove('active'));
+                    
+                    // Добавляем активный класс текущему пункту
+                    this.classList.add('active');
+                    
+                    // Показываем соответствующую страницу
+                    const pageId = this.getAttribute('data-page') + '-page';
+                    document.getElementById(pageId).classList.add('active');
+                });
+            });
+
+            // Выбор счета
+            const accountMinis = document.querySelectorAll('.payment-account-mini');
+            accountMinis.forEach(account => {
+                account.addEventListener('click', function() {
+                    accountMinis.forEach(acc => acc.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+
+            // Анимация карточек при наведении
+            const cards = document.querySelectorAll('.product-card, .action-btn, .support-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+
+// Простой вариант без подтверждения
+const logoutBtn = document.querySelector('.logout-btn');
+logoutBtn.addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
+
+
+
+
+
+
+        });
+    </script>
+
+    <style>
+        /* Стили для дополнительных страниц */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .cards-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card-full {
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            border-radius: 16px;
+            padding: 25px;
+            border: 1px solid #404040;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-full.debit {
+            border-color: #404040;
+        }
+
+        .card-full.premium {
+            border-color: #ff3333;
+        }
+
+        .card-full.credit {
+            border-color: #00a2ff;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-status {
+            background: #2a5c2a;
+            color: #88cc88;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .card-number {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .card-balance, .card-limit {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .card-btn {
+            background: #333333;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: #cccccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background: #404040;
+        }
+
+        .transfer-form {
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cccccc;
+        }
+
+        .form-select, .form-input {
+            width: 100%;
+            padding: 12px;
+            background: #333333;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            color: #e0e0e0;
+        }
+
+        .transfer-btn {
+            background: #00a2ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .transfer-btn:hover {
+            background: #0088cc;
+        }
+
+        .history-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-select, .date-input {
+            padding: 8px 12px;
+            background: #333333;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            color: #e0e0e0;
+        }
+
+        .settings-list {
+            max-width: 500px;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #404040;
+        }
+
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+
+        .setting-title {
+            color: #e0e0e0;
+            margin-bottom: 5px;
+        }
+
+        .setting-desc {
+            color: #999999;
+            font-size: 14px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #404040;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #00a2ff;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .setting-btn {
+            background: #333333;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            padding: 8px 16px;
+            color: #cccccc;
+            cursor: pointer;
+        }
+
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .support-card {
+            background: #333333;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #404040;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .support-card:hover {
+            border-color: #00a2ff;
+        }
+
+        .support-card i {
+            font-size: 40px;
+            color: #00a2ff;
+            margin-bottom: 15px;
+        }
+
+        .support-card h3 {
+            color: #cccccc;
+            margin-bottom: 10px;
+        }
+
+        .support-card p {
+            color: #e0e0e0;
+            margin-bottom: 5px;
+        }
+
+        .support-card small {
+            color: #999999;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>
